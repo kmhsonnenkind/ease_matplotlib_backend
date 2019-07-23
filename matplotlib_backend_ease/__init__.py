@@ -17,10 +17,10 @@ class EventTimedShow(ShowBase):
     shut down.
     '''
     #: Simple event to wait for window to be closed.
-    show_stopper: threading.Event = threading.Event()
+    show_stopper = threading.Event()
 
     @classmethod
-    def mainloop(cls, block: bool=None):
+    def mainloop(cls, block=None):
         '''
         Main loop just waiting for window to be closed.
 
@@ -41,7 +41,7 @@ class FileOpener:
 
     Opens image and sets callbacks for close event.
     '''
-    def __init__(self, filename: str):
+    def __init__(self, filename):
         '''
         Constructor only stores file to be opened.
 
@@ -98,7 +98,7 @@ class FigureManagerEase(FigureManagerBase):
         org.eclipse.swt.widgets.Display.getDefault().asyncExec(FileOpener(tmp_file))
 
 
-def new_figure_manager(num: int, *args, **kwargs) -> FigureManagerBase:
+def new_figure_manager(num, *args, **kwargs):
     '''
     Creates a new figure manager instance.
 
@@ -110,7 +110,7 @@ def new_figure_manager(num: int, *args, **kwargs) -> FigureManagerBase:
     return new_figure_manager_given_figure(num, thisFig)
 
 
-def new_figure_manager_given_figure(num: int, figure: Figure) -> FigureManagerBase:
+def new_figure_manager_given_figure(num, figure):
     '''
     Creates new figure manager instance for given figure.
 
