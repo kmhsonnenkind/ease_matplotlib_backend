@@ -11,7 +11,7 @@ It is not meant to be used productively but rather as a starting point for anyon
 
 ## Installation
 
-Simply run `python setup.py install` to have install the package and have it available in matplotlib.
+Simply run `python setup.py install` to install the package and have it available in matplotlib.
 
 
 ## Usage
@@ -56,3 +56,8 @@ As this is just a proof of concept there are several issues (some of which could
 
 #### The backend only renders static images so no zoom, hover, etc.
 **Fix:** This can be a bit tricky. We would either need to implement a full backend or try to hijack some of the HTML renderers available.
+
+
+## Notes
+
+I tested the code on Python 3.7.0 with matplotlib version 2.2.3 (part of Anaconda installation)
